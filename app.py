@@ -23,7 +23,8 @@ st.title("🩺 Glaucoma Detection & PDF Report")
 # Collect Patient Info
 name = st.text_input("👤 Full Name")
 age = st.number_input("🎂 Age", min_value=1, max_value=120, value=30)
-dob = st.date_input("📅 Date of Birth")
+dob = st.date_input("📅 Date of Birth", min_value=datetime.date(1980, 1, 1))
+
 
 uploaded_file = st.file_uploader("📤 Upload Fundus Image", type=["jpg", "jpeg", "png"])
 
